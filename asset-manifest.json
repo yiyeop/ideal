@@ -1,13 +1,13 @@
 {
-  "main.css": "/ideal/static/css/main.4d98d6a7.chunk.css",
-  "main.js": "/ideal/static/js/main.cf79805c.chunk.js",
-  "main.js.map": "/ideal/static/js/main.cf79805c.chunk.js.map",
+  "main.css": "/ideal/static/css/main.3f5daa28.chunk.css",
+  "main.js": "/ideal/static/js/main.7c7ed8f8.chunk.js",
+  "main.js.map": "/ideal/static/js/main.7c7ed8f8.chunk.js.map",
   "runtime~main.js": "/ideal/static/js/runtime~main.06b446f7.js",
   "runtime~main.js.map": "/ideal/static/js/runtime~main.06b446f7.js.map",
-  "static/js/2.a03e2c82.chunk.js": "/ideal/static/js/2.a03e2c82.chunk.js",
-  "static/js/2.a03e2c82.chunk.js.map": "/ideal/static/js/2.a03e2c82.chunk.js.map",
+  "static/js/2.0295ac38.chunk.js": "/ideal/static/js/2.0295ac38.chunk.js",
+  "static/js/2.0295ac38.chunk.js.map": "/ideal/static/js/2.0295ac38.chunk.js.map",
   "index.html": "/ideal/index.html",
-  "precache-manifest.c825cef5b2ea01a1c9f5e56f8ed51731.js": "/ideal/precache-manifest.c825cef5b2ea01a1c9f5e56f8ed51731.js",
+  "precache-manifest.6ad22ac397d93fb59de6a05e6cfbff61.js": "/ideal/precache-manifest.6ad22ac397d93fb59de6a05e6cfbff61.js",
   "service-worker.js": "/ideal/service-worker.js",
-  "static/css/main.4d98d6a7.chunk.css.map": "/ideal/static/css/main.4d98d6a7.chunk.css.map"
+  "static/css/main.3f5daa28.chunk.css.map": "/ideal/static/css/main.3f5daa28.chunk.css.map"
 }
