@@ -7,6 +7,21 @@ const arrShuffle = arr => {
   });
 };
 
+const Versus = () => {
+  return (
+    <div
+      style={{
+        margin: "120px -0.5rem 0 -0.5rem",
+        color: "#f03e3e",
+        fontSize: "14px",
+        fontWeight: 600
+      }}
+    >
+      VS
+    </div>
+  );
+};
+
 const ItemSelector = ({ data, name }) => {
   const [stage, setStage] = useState(0);
   const [round, setRound] = useState(0);
@@ -81,7 +96,7 @@ const ItemSelector = ({ data, name }) => {
     }
   };
 
-  const roundArray = ["32강", "16강", "8강", "4강", "준결승", "결승"];
+  const roundArray = ["32강", "16강", "8강", "4강", "결승", "결과"];
 
   return (
     <>
@@ -92,12 +107,11 @@ const ItemSelector = ({ data, name }) => {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          marginTop: "1rem",
-          marginLeft: "1rem"
+          marginTop: "1rem"
         }}
       >
         <h3> 이상형 월드컵</h3>
-        <h4> {roundArray[round]}</h4>
+        <div style={{ fontWeight: "600" }}> {roundArray[round]}</div>
         {shuffled && (
           <div style={{ display: "flex", justifyContents: "center" }}>
             {/* 1라운드 */}
@@ -109,7 +123,7 @@ const ItemSelector = ({ data, name }) => {
                   stage={stage}
                   length={shuffled.length}
                 />
-                <div style={{ marginTop: "120px" }}>VS</div>
+                <Versus />
                 <Item
                   data={shuffled[stage + 1]}
                   clickFn={selectItem}
@@ -127,7 +141,7 @@ const ItemSelector = ({ data, name }) => {
                   stage={stage}
                   length={selected.length}
                 />
-                <div style={{ marginTop: "120px" }}>VS</div>
+                <div style={{ margin: "120px -0.5rem 0 -0.5rem" }}>VS</div>
                 <Item
                   data={selected[stage + 1]}
                   clickFn={selectItem}
@@ -136,6 +150,7 @@ const ItemSelector = ({ data, name }) => {
                 />
               </>
             )}
+            {/* 선택시화면 */}
             {hidden && (
               <>
                 {currentRoundSelected.length > 0 ? (
@@ -146,13 +161,15 @@ const ItemSelector = ({ data, name }) => {
                     length={selected.length}
                   />
                 ) : (
-                  <div style={{ marginTop: "5rem" }}>다음 라운드</div>
+                  <div style={{ marginTop: "5rem", fontWeight: "600" }}>
+                    다음 라운드
+                  </div>
                 )}
               </>
             )}
             {/* 최종화면 */}
             {!hidden && round > 0 && selected.length === 1 && (
-              <>
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 <h3>{name}님의 이상형은</h3>
                 <Item
                   data={selected[stage]}
@@ -160,13 +177,40 @@ const ItemSelector = ({ data, name }) => {
                   stage={stage}
                   length={selected.length}
                 />
-                {console.log(
-                  "2등",
-                  oldSelected[oldSelected.length - 2].filter(
-                    item => selected[stage].name !== item.name
-                  )
-                )}
-              </>
+                <div>
+                  <p>2등</p>
+                  <Item
+                    data={
+                      oldSelected[oldSelected.length - 2].filter(
+                        item => selected[stage].name !== item.name
+                      )[0]
+                    }
+                    clickFn={() => {}}
+                    stage={stage}
+                    length={selected.length}
+                  />
+                </div>
+                <div>
+                  <p>공동 3등</p>
+                  {oldSelected[oldSelected.length - 3]
+                    .filter(
+                      item =>
+                        selected[stage].name !== item.name &&
+                        item.name !==
+                          oldSelected[oldSelected.length - 2].filter(
+                            item => selected[stage].name !== item.name
+                          )[0].name
+                    )
+                    .map(item => (
+                      <Item
+                        data={item}
+                        clickFn={() => {}}
+                        stage={stage}
+                        length={selected.length}
+                      />
+                    ))}
+                </div>
+              </div>
             )}
           </div>
         )}

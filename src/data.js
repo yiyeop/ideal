@@ -1,4 +1,4 @@
-export const data = [
+export const girlData = [
   {
     name: "문채원",
     img:
@@ -19,11 +19,12 @@ export const data = [
   },
   {
     name: "천우희",
-    img: "http://cphoto.asiae.co.kr/listimglink/1/2017083014593121674_8.jpg"
+    img:
+      "https://image.ajunews.com/content/image/2017/08/31/20170831201452767262.jpg"
   },
   {
     name: "김고은",
-    img: "https://simage-kr.uniqlo.com/display/corner/2162/webnews_180212.jpg"
+    img: "http://www.intronews.net/news/photo/201806/102795_131688_2427.JPG"
   },
   {
     name: "김태리",
@@ -37,7 +38,8 @@ export const data = [
   },
   {
     name: "정소민",
-    img: "https://fimg4.pann.com/new/download.jsp?FileID=47673297"
+    img:
+      "http://preimage.hankookilbo.com/i.aspx?Guid=d8b054de540f4679b019c97d1f646339&Month=DirectUpload&size=640"
   },
   {
     name: "설현",
@@ -90,7 +92,7 @@ export const data = [
   },
   {
     name: "다현",
-    img: "http://image.chosun.com/sitedata/image/201708/17/2017081701010_0.jpg"
+    img: "https://i.imgur.com/IjYZ803.jpg"
   },
   {
     name: "지수",
@@ -123,7 +125,7 @@ export const data = [
   },
   {
     name: "채수빈",
-    img: "http://www.newsa.co.kr/news/photo/201810/192426_149510_1516.jpg"
+    img: "http://ph.cctoday.co.kr/news/photo/201611/1016740_364126_5029.jpg"
   },
   {
     name: "수지",
@@ -158,8 +160,7 @@ export const data = [
   },
   {
     name: "진세연",
-    img:
-      "data:image/jpeg;base64,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"
+    img: "http://image.chosun.com/sitedata/image/201812/14/2018121400471_0.jpg"
   },
   {
     name: "공승연",
@@ -197,10 +198,11 @@ export const data = [
   {
     name: "정유미",
     img:
-      "https://img.huffingtonpost.com/asset/5bc7fa52260000490283dd3f.jpeg?cache=IRjek3qdO8&ops=crop_108_108_2084_1531,scalefit_630_noupscale"
+      "https://dispatch.cdnser.be/wp-content/uploads/2017/05/20170522183259_0000965800_001_20170522180121821.jpg"
   },
   {
     name: "박은빈",
-    img: "http://www.topstarnews.net/news/photo/first/201801/img_347445_1.jpg"
+    img:
+      "http://file2.nocutnews.co.kr/newsroom/image/2017/10/18/20171018001340525697.jpg"
   }
 ];

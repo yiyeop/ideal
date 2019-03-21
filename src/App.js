@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { data as girlData } from "./data";
+import { girlData } from "./data";
 import ItemSelector from "./ItemSelector";
 import Main from "./Main";
 
@@ -52,21 +52,6 @@ class App extends Component {
             </div>
           </>
         )}
-        <div
-          style={{
-            borderTop: "1px solid #efefef",
-            width: "100%",
-            color: "grey",
-            fontSize: "12px",
-            textAlign: "center",
-            position: "absolute",
-            bottom: 0,
-            padding: "1rem 1rem",
-            marginTop: "1rem"
-          }}
-        >
-          이상형월드컵 Made By 대치 역삼 연합회
-        </div>
       </>
     );
   }

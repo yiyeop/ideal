@@ -1,24 +1,37 @@
 import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  margin: 1rem 1rem;
+  background: #dee2e6;
+  cursor: pointer;
+  border-radius: 5px;
+  .img-container {
+    margin: 0.5rem 0.5rem;
+    width: 150px;
+    @media screen and (min-width: 360px) {
+      width: 170px;
+    }
+    @media screen and (min-width: 400px) {
+      width: 200px;
+    }
+    @media screen and (min-width: 460px) {
+      width: 210px;
+    }
+    @media screen and (min-width: 600px) {
+      width: 270px;
+    }
+  }
+`;
 
 const Item = ({ data, clickFn, stage, length }) => {
   return (
-    <div
+    <Container
       onClick={() => {
         clickFn(data, stage, length);
       }}
-      style={{
-        margin: "1rem 1rem",
-        background: "#dee2e6",
-        cursor: "pointer",
-        borderRadius: "5px"
-      }}
     >
-      <div
-        style={{
-          width: "185px",
-          margin: "0.5rem 0.5rem"
-        }}
-      >
+      <div className="img-container">
         <div
           style={{
             position: "relative",
@@ -54,7 +67,7 @@ const Item = ({ data, clickFn, stage, length }) => {
       >
         {data.name}
       </div>
-    </div>
+    </Container>
   );
 };
 
