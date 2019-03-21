@@ -179,5 +179,28 @@ export const data = [
     name: "선미",
     img:
       "https://post-phinf.pstatic.net/MjAxNzEwMThfMTU0/MDAxNTA4MzA2NDY1NTc0.v8hAlq9x0S4w5ZqQRAHXJb2Fc8a5kTfZULeOqnjcGgMg.tTjDv7iY8uuL3ctCDtUoMF5W7YVMVix3kDEZUJhD0YQg.JPEG/jy171017g7.jpg?type=w1200"
+  },
+  {
+    name: "박혜수",
+    img: "https://search1.kakaocdn.net/argon/600x0_65_wr/3jnYfD9Xfr2"
+  },
+  {
+    name: "연우",
+    img:
+      "http://img.etnews.com/news/article/2018/11/06/cms_temp_article_06164031812350.jpg"
+  },
+  {
+    name: "로제",
+    img:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwSLvVKWEKidvRRwqaSgZynMAeBDwlmL_HrydjH9EcV67kyGhL"
+  },
+  {
+    name: "정유미",
+    img:
+      "https://img.huffingtonpost.com/asset/5bc7fa52260000490283dd3f.jpeg?cache=IRjek3qdO8&ops=crop_108_108_2084_1531,scalefit_630_noupscale"
+  },
+  {
+    name: "박은빈",
+    img: "http://www.topstarnews.net/news/photo/first/201801/img_347445_1.jpg"
   }
 ];

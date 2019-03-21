@@ -16,11 +16,13 @@ const ItemSelector = ({ data, name }) => {
 
   const [currentRoundSelected, setCurrentRoundSelected] = useState([]);
   const [selected, setSelected] = useState([]);
+  const [oldSelected, setOldSelected] = useState([]);
 
   const addSelect = lastData => {
     // 마지막 선택 포함하여 셔플해서 다음단계로 넘김
     const newShuffle = arrShuffle([...currentRoundSelected, lastData]);
-    setSelected(newShuffle.splice(0, 32));
+    setSelected(newShuffle);
+    setOldSelected([...oldSelected, newShuffle]);
   };
 
   const addOddSelect = (lastData, currentData) => {
@@ -31,10 +33,11 @@ const ItemSelector = ({ data, name }) => {
       lastData
     ]);
     setSelected(newShuffle);
+    setOldSelected([...oldSelected, newShuffle]);
   };
 
   useEffect(() => {
-    setShuffled(arrShuffle(data));
+    setShuffled(arrShuffle(data).splice(0, 32));
   }, []);
 
   const appearSelect = () => {
@@ -45,9 +48,6 @@ const ItemSelector = ({ data, name }) => {
   };
 
   const selectItem = (data, current, length) => {
-    console.log(current + 4);
-    console.log(length);
-
     if (length % 2 !== 0) {
       // length가 홀수 일때 마지막 데이터 그냥 더함
       if (current + 4 <= length) {
@@ -92,12 +92,12 @@ const ItemSelector = ({ data, name }) => {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          marginTop: "3rem"
+          marginTop: "1rem",
+          marginLeft: "1rem"
         }}
       >
         <h3> 이상형 월드컵</h3>
         <h4> {roundArray[round]}</h4>
-
         {shuffled && (
           <div style={{ display: "flex", justifyContents: "center" }}>
             {/* 1라운드 */}
@@ -160,6 +160,12 @@ const ItemSelector = ({ data, name }) => {
                   stage={stage}
                   length={selected.length}
                 />
+                {console.log(
+                  "2등",
+                  oldSelected[oldSelected.length - 2].filter(
+                    item => selected[stage].name !== item.name
+                  )
+                )}
               </>
             )}
           </div>

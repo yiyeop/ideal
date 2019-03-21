@@ -28,10 +28,10 @@ class App extends Component {
             >
               <button
                 style={{
-                  all: "unset",
                   border: "1px solid #efefef",
                   padding: "0.5rem 1rem",
                   fontWeight: 600,
+                  fontSize: "16px",
                   cursor: "pointer",
                   borderRadius: "4px",
                   background: "#7048e8",
@@ -61,7 +61,8 @@ class App extends Component {
             textAlign: "center",
             position: "absolute",
             bottom: 0,
-            padding: "1rem 1rem"
+            padding: "1rem 1rem",
+            marginTop: "1rem"
           }}
         >
           이상형월드컵 Made By 대치 역삼 연합회

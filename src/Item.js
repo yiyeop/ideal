@@ -15,7 +15,7 @@ const Item = ({ data, clickFn, stage, length }) => {
     >
       <div
         style={{
-          width: "200px",
+          width: "185px",
           margin: "0.5rem 0.5rem"
         }}
       >
@@ -43,7 +43,15 @@ const Item = ({ data, clickFn, stage, length }) => {
         </div>
       </div>
 
-      <div style={{ textAlign: "center", fontSize: "20px", margin: '0.5rem 0.5rem', padding: '0.2rem 0.5rem', background: '#f8f9fa' }}>
+      <div
+        style={{
+          textAlign: "center",
+          fontSize: "20px",
+          margin: "0.5rem 0.5rem",
+          padding: "0.2rem 0.5rem",
+          background: "#f8f9fa"
+        }}
+      >
         {data.name}
       </div>
     </div>

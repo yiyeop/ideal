@@ -18,8 +18,9 @@ const Main = ({ onChange }) => {
         placeholder="이름을 입력하세요"
         onChange={onChange}
         style={{
-          all: "unset",
+          border: "none",
           width: "200px",
+          fontSize: "16px",
           textAlign: "center",
           borderBottom: "1px solid #efefef",
           padding: "0.3rem 0.5rem"
